@@ -33,3 +33,7 @@ LABEL "com.github.actions.color"="purple"
 LABEL "repository"="http://github.com/expandonline/dept-php-ci"
 LABEL "homepage"="http://github.com/actions"
 LABEL "maintainer"="Peter Vaassens <peter.vaassens@deptagency.com>"
+
+COPY ./entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]
